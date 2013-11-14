@@ -1,8 +1,13 @@
 CrashUp::Application.routes.draw do
-  devise_for :users
+  #get "pages/index"
+  devise_for :users do
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  root :to => "home#index"
+  root :to => "pages#index"
+
+  resources :pages
+  #resources :sessions
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
