@@ -1,4 +1,4 @@
-Given (/^I am logged in as an admin$/) do
+#Given (/^I am logged in as an admin$/) do
 
-end
+#end
 
