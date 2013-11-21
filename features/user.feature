@@ -12,3 +12,14 @@ Scenario: Sucessful Sign Up
   And I fill in password
   And I fill in password_confirmation
   And I press "Sign Up"
+  Then page should have content "Welcome! You have signed up successfully."
+
+Scenario:  Unsuccessful Sign Up
+  Given I am on the home page
+  When I click "New"
+  Then I am on the users sign up page
+  When I fill in email
+  And I fill in password
+  And I fill in password_confirmation
+  And I press "Sign Up"
+  Then page should have content "Error"

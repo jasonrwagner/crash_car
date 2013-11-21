@@ -1,7 +1,6 @@
+
 Given (/^I am on the home page$/) do 
 	visit pages_path
-	#visit new_user_registration_path
-	#click_link "Sign up"
 end
 
 When(/^I click "(.*?)"$/) do |new|
@@ -18,13 +17,25 @@ And(/^I fill in email$/) do
 end
 
 And(/^I fill in password$/) do
-  fill_in("user_password", :with => "Secret")
+  fill_in("user_password", :with => "SecretPass")
 end
 
 And(/^I fill in password_confirmation$/) do
-  fill_in("user_password_confirmation", :with => "Secret")
+  fill_in("user_password_confirmation", :with => "SecretPass")
 end
 
 And(/^I press "(.*?)"$/) do |sign_up|
   click_button "Sign up"
+  visit pages_path
 end
+
+Then(/^page should have content "(.*?)"$/) do |notice|
+  page.should have_content :notice
+end
+
+
+
+
+
+
+
