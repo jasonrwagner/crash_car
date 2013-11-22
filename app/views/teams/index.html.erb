@@ -1,0 +1,18 @@
+<h1>teams index</h1>
+    
+  <ul>
+    <% @teams_in_play_list.each do |team| %>
+      <li>
+        <%= team.name %>
+      </li>
+
+    <% end %>
+  </ul>
+
+  <% if @tournament.teams.count < @tournament.number_of_teams %>
+    <%= link_to 'Add another Team', new_tournament_team_path(@tournament) %>
+  <% else %>
+
+    <%= link_to 'All Good?', tournament_round_robins_path(@tournament) %>
+
+  <% end %>

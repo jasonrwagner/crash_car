@@ -8,7 +8,7 @@ class TournamentsController < ApplicationController
   end
 
   def create
-  	@tournament = Tournament.new(params[:tournament])
+  	@tournament = Tournament.new(tournament_params)
 	    if @tournament.save
   	    flash[:success] = "Made a new tournament"
   	    redirect_to @tournament

@@ -6,11 +6,7 @@ Given (/^I am a logged in user$/) do
 	visit pages_path
 end
 
-And(/^page should have content"(.*?)"$/) do |notice|
-  page.should have_content :notice
-end
-
-When(/^I click "(.*?)"$/) do |create|
-  click_link"Create a Tournament"
+When (/^I create a new tournament$/) do
+	
 end
 

@@ -5,9 +5,8 @@ Feature: Manage a Tournament
 
   Scenario:  Create a new Tournament
     Given I am a logged in user
-    And page should have content "Signed in successfully."
-    When I click "Create a Torunamnet"
-    Then I should go to the create a tournament page
+    When I create a new tournament
+    Then I should see it in the tournaments list
 
 
     
