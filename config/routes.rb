@@ -7,6 +7,7 @@ CrashUp::Application.routes.draw do
   root :to => "pages#index"
 
   resources :pages
+  resources :tournaments
   #resources :sessions
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
