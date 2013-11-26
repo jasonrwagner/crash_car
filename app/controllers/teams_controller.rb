@@ -20,7 +20,7 @@ class TeamsController < ApplicationController
 
   def create
     @tournament = Tournament.find(params[:tournament_id])
-  	@team = @tournament.teams.new(params[:team])
+  	@team = @tournament.teams.new(team_params)
 	  if @team.save
   	  flash[:success] = "Added Team"
   	  redirect_to tournament_teams_path
