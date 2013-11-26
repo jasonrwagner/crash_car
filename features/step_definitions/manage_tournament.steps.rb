@@ -8,5 +8,11 @@ end
 
 When (/^I create a new tournament$/) do
 	
+	
+end
+
+Then (/^I should see it in the tournaments list$/) do |tourn|
+	visit pages_path
+	page.should have_content :tourn
 end
 

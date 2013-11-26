@@ -1,4 +1,23 @@
 <h1>Pages#index</h1>
+
+
+
+
+
+<% if user_signed_in? %>
+  <div>Hello <%= current_user.email %> pick your tournament</div>
+  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<% else %>
+<h1>First Time</h1>
+
+
+
+
+  <%= render "devise/shared/links" %>
+
+
+<% end %>
+
 <%= render template:"tournaments/index" %>
 
 <div id="sign_in">
