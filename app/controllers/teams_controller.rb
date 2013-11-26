@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
 
   def index
     @tournament = Tournament.find(params[:tournament_id])   
-  	@teams_count = @tournament.number_of_teams_in_play
+#  	@teams_count = @tournament.number_of_teams_in_play
     @teams_in_play_list = @tournament.teams.all
   end
 
@@ -29,7 +29,14 @@ class TeamsController < ApplicationController
 	  end
   end
 
+  private
+
+#  def tournament_params
+#    params.require(:tournament).permit(:name, :number_of_teams, :id)
+#  end
+
   def team_params
     params.require(:team).permit(:name)
   end
+
 end
