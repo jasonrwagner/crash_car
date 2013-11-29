@@ -6,23 +6,22 @@
 
 <% if user_signed_in? %>
   <div>Hello <%= current_user.email %> pick your tournament</div>
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <div id="sign_in"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></div>
 <% else %>
-<h1>First Time</h1>
+<h1>welcome</h1>
 
 
 
-
-  <%= render "devise/shared/links" %>
-
-
-<% end %>
-
-<%= render template:"tournaments/index" %>
 
 <div id="sign_in">
   <%= link_to "New", new_user_registration_path, :method => :get %>
   <%= link_to "Sign in", new_user_session_path, :method => :get %>
   <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 </div>
+
+
+<% end %>
+
+<%= render template:"tournaments/index" %>
+
 
