@@ -23,6 +23,15 @@ class TournamentsController < ApplicationController
     @tournament = Tournament.find(params[:id])
   end
 
+  def edit
+    @tournament = Tournament.find(params[:id])
+  end
+
+  def update
+    @tournament = Tournament.find(params[:id])
+    @tournament.update(tournament_params)
+  end
+
 
   def tournament_params
     params.require(:tournament).permit(:name, :number_of_teams, :id, :created_by, :user_email)
