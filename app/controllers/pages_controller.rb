@@ -3,4 +3,5 @@ class PagesController < ApplicationController
     @tournaments = Tournament.all
   	render :controller => "tournaments", :action => "index"
   end
+
 end

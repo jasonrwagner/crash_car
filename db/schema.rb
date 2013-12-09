@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131129182122) do
+ActiveRecord::Schema.define(version: 20131209173704) do
+
+  create_table "round_robins", force: true do |t|
+    t.text     "teams_in_play"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roundrobins", force: true do |t|
+    t.text     "teams_in_play"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rounds", force: true do |t|
+    t.string   "robin"
+    t.text     "teams_in_play"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rounrobins", force: true do |t|
+    t.text     "teams_in_play"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "teams", force: true do |t|
     t.string   "name"

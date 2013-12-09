@@ -9,6 +9,7 @@ CrashUp::Application.routes.draw do
   resources :pages
   resources :tournaments do
     resources :teams
+    resources :round_robins
   end
   #resources :sessions
   # You can have the root of your site routed with "root"

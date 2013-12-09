@@ -1,6 +1,7 @@
 class TournamentsController < ApplicationController
   def index
     @tournaments = Tournament.all
+    @tournament.created_by = Tournament.where(:user_id => current_user)
   end
 
   def new
