@@ -55,7 +55,7 @@ class RoundRobinsController < ApplicationController
 
 
   def round_robin_params
-    params.require(:round_robin).permit(:id, :teams_in_play)
+    params.require(:round_robin).permit(:teams_in_play)
   end
 
 end

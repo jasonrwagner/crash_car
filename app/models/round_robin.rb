@@ -7,6 +7,8 @@ class RoundRobin < ActiveRecord::Base
   accepts_nested_attributes_for :tournament
   accepts_nested_attributes_for :teams
 
+  serialize :teams_in_play
+
 
   def schedule(tournament_id)
 
