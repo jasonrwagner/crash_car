@@ -17,18 +17,15 @@ class RoundRobin < ActiveRecord::Base
     
     number_of_teams = Tournament.find(tournament_id).number_of_teams
     teams = Tournament.find(tournament_id), RoundRobin.find(id)
-    puts "#{number_of_teams}help"
+    puts "#{number_of_teams}number_of_teams"
     puts "#{teams}"
-
-
-
     row1 = (1..number_of_teams).map do |home_team|
-        puts home_team
+        puts "#{home_team}home_team_slot"
 
     end
 
     row2 = (1..number_of_teams).map do |away_team|
-        puts away_team
+        puts "#{away_team}away_team_slot"
     end 
 
     a = teams_in_play.permutation(2).to_a
